@@ -30,11 +30,11 @@ const Event = [
 	}
 ];
 
-app.get("/", (request, response) => {
+app.get("/", (request, response) => { // Send all venues.
 	response.send(Venue)
 });
 
-app.get("/:id", (req, res) => { // This is supposed to send a venue that matches a specific id.
+app.get("/:id", (req, res) => { // Send a venue that matches a specific id.
 	res.send(Venue[req.params.id])
 })
 
