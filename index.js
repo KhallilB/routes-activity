@@ -34,6 +34,10 @@ app.get("/", (request, response) => {
 	response.send(Venue)
 });
 
+app.get("/:id", (req, res) => { // This is supposed to send a venue that matches a specific id.
+	res.send(Venue[req.params.id])
+})
+
 app.listen(3000, () => {
 	console.log("listening on port 3000")
 });
