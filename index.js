@@ -1,5 +1,5 @@
 const express require('express'); // Import express
-const EventRoute = express.Router(); // Set up Router
+const app = express(); // Set up Router
 
 
 const Venue = [
@@ -30,7 +30,7 @@ const Event = [
 	}
 ];
 
-express.get("./venues", (request, response) => {
+app.get("./venues", (request, response) => {
 	response.send(Venue)
 })
 
