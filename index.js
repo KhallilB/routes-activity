@@ -34,6 +34,4 @@ express.get("./venues", (request, response) => {
 	response.render("venue-template");
 })
 
-
-
 module.exports = EventRoute // Export Router
