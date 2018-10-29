@@ -1,4 +1,4 @@
-const express require('express'); // Import express
+const express = require('express'); // Import express
 const app = express(); // Set up Router
 
 
@@ -30,8 +30,12 @@ const Event = [
 	}
 ];
 
-app.get("./venues", (request, response) => {
+app.get("/", (request, response) => {
 	response.send(Venue)
-})
+});
 
-module.exports = EventRoute // Export Router
+app.listen(3000, () => {
+	console.log("listening on port 3000")
+});
+
+module.exports = app // Export Router
