@@ -31,7 +31,7 @@ const Event = [
 ];
 
 express.get("./venues", (request, response) => {
-	response.render("venue-template");
+	response.send(Venue)
 })
 
 module.exports = EventRoute // Export Router
